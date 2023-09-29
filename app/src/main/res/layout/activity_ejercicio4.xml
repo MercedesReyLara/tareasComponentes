@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicio4"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/Apellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/Tlf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero de telefono"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/Edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/FechaNacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de nacimiento"
+        android:inputType="datetime" />
+
+    <EditText
+        android:id="@+id/Direccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Direccion"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/Contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword" />
+    <CheckBox android:id="@+id/deporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="deporte"/>
+    <CheckBox android:id="@+id/videojuegos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="videojuegos"/>
+    <RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/grupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/masc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"/>
+        <RadioButton android:id="@+id/femenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino"/>
+        <RadioButton android:id="@+id/NODECIRLO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prefiero no decirlo"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/enviar"
+        android:textSize="15dp"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar" />
+
+    <TextView
+        android:id="@+id/mensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp" />
+</LinearLayout>
