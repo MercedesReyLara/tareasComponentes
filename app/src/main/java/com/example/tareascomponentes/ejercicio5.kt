@@ -17,8 +17,6 @@ class ejercicio5 : AppCompatActivity() {
         var fil:EditText=findViewById(R.id.filas)
         var columnas:EditText=findViewById(R.id.columnas)
         var boton: Button =findViewById(R.id.botonEnviar)
-        val largo:Int = 10
-        val alto: Int = 10
 
         boton.setOnClickListener{
             var numF=fil.text.toString().toInt()
@@ -27,19 +25,14 @@ class ejercicio5 : AppCompatActivity() {
             tabla.removeAllViews()
          for (i in 1..numF) {
             var fila:TableRow= TableRow(this)
+
             for(y in 1..numC) {
                 val imageView = ImageView(this)
-                val resourceId = resources.getIdentifier("rqewqrew", "drawable", packageName)
-                val layoutParams= imageView.layoutParams
-                layoutParams.width = (largo)
-                layoutParams.height = (alto)
-                imageView.layoutParams=layoutParams
-                imageView.setImageResource(resourceId)
+                imageView.setImageResource(R.drawable.imagen)
                 fila.addView(imageView)
             }
              tabla.addView(fila)
         }
-
         }
     }
 }

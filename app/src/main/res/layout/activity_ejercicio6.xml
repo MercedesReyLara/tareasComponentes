@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicio6">
+
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000080"
+        android:gravity="center"
+        android:text="Book flight"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/roundTrip"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texto1"
+            android:text="@string/roundtrip"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/texto1" />
+
+        <RadioButton
+            android:id="@+id/oneWay"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texto1"
+            android:text="@string/one_way"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/roundTrip"
+            app:layout_constraintTop_toBottomOf="@+id/texto1" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/History"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_below="@id/texto1"
+        android:text="@string/History"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textoF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/from"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/History" />
+
+    <EditText
+        android:id="@+id/desde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoF"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textoT"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/desde"
+        android:text="@string/to"
+        android:textColor="#000080"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desde">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/hasta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoT"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/dep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="@string/depart"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/retur"
+        app:layout_constraintTop_toBottomOf="@+id/hasta" />
+
+    <EditText
+        android:id="@+id/fechaIda"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:imeOptions="actionDone"
+        android:inputType="datetime"
+        app:layout_constraintStart_toEndOf="@+id/fechaVuelta"
+        app:layout_constraintTop_toBottomOf="@+id/dep"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/retur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hasta"
+        android:layout_marginStart="5dp"
+        android:text="@string/depart"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hasta" />
+
+
+    <EditText
+        android:id="@+id/fechaVuelta"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:imeOptions="actionNext"
+        android:inputType="datetime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/retur"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_toRightOf="@id/dep"
+        android:text="@string/passengers"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/dep"
+        app:layout_constraintTop_toBottomOf="@+id/hasta" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#008000"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/fechaIda"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        android:text="+"
+        android:backgroundTint="#008000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/mnos"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaVuelta" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/NonStop"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/nonstop"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/OneStop"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/onestop"
+            android:textSize="17sp" />
+        <RadioButton
+            android:id="@+id/orMore"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/_2_or_more"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/textView4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:text="@string/_0"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+
+    <Button
+        android:id="@+id/buscar"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:text="Search Flights"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/resumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscar"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="57dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="182dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buscar"
+        app:srcCompat="@drawable/icono"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

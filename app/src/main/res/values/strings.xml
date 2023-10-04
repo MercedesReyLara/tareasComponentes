@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">tareasComponentes</string>
+    <string name="from">From</string>
+    <string name="one_way">One Way</string>
+    <string name="roundtrip">Roundtrip</string>
+    <string name="to">To</string>
+    <string name="depart">Depart</string>
+    <string name="History">History\n</string>
+    <string name="passengers">Passengers</string>
+    <string name="mnos">Maximum number of stops</string>
+    <string name="onestop">OneStop</string>
+    <string name="nonstop">NonStop</string>
+    <string name="_2_or_more">2 or More</string>
+    <string name="_0">0</string>
 </resources>
